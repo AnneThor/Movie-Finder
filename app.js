@@ -3,7 +3,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const app = express();
 const routes = require("./public/scripts/routes.js");
-const port = 3000;
+const port = process.env.PORT ? process.env.PORT : 8000;
 
 require("dotenv").config();
 
