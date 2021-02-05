@@ -1,0 +1,5 @@
+mixin movieDisplay(movie)
+  div(class="movie-tile")
+    img(class="movie-poster" src=movie.Poster)
+    h5 #{movie.Title}
+    a(href="/movie/:" + movie.imdbID class="btn btn-primary") Movie Details

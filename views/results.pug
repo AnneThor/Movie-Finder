@@ -1,0 +1,11 @@
+extends layout.pug
+include mixins/_movieDisplay
+
+block content
+  if movieData
+    div.movie-data
+      each movie in movieData
+        +movieDisplay(movie)
+
+  div.container
+    div#movies.row

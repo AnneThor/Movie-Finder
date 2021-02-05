@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+  div.container
+    div.jumbotron
+      h3.text-center Search For Any Movie
+      form#searchForm(action="/search" method="post")
+        input(type="text" class="form-control" name="searchText" id="searchText" placeholder="Search Movies...")
+
+  if movieData
+    div.movie-data
+      each movie in movieData
+        div.col-md-3
+          div(class="well text-center")
+            img(src=`#{movie.Poster}`)
+            h5 #{movie.Title}
+            a(href="#" onClick="movieSelected(`#{movie.imdbID}`)" class="btn btn-primary") Movie Details
+  else
+    p #{errMessage}
+
+  div.container
+    div#movies.row

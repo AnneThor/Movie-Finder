@@ -1,0 +1,10 @@
+extends layout.pug
+include mixins/_movieDetails
+
+block content
+  h1 Movie Details
+  div#movie-details
+    +movieDetails(movieDetails)
+
+  div.container
+    div#movies.row

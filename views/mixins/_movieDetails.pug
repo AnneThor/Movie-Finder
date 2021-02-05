@@ -1,0 +1,21 @@
+mixin movieDetails(movie)
+  div.row
+    div.col-md-4
+      img(src=movie.Poster).thumbnail
+    div.col-md-8
+      h2 #{movie.title}
+      ul.list-group
+        li.list-group-item Genre: #{movie.Genre}
+        li.list-group-item Released: #{movie.Released}
+        li.list-group-item Rated: #{movie.Rated}
+        li.list-group-item IMDB Rating: #{movie.imdbRating}
+        li.list-group-item Director: #{movie.Director}
+        li.list-group-item Writer: #{movie.Writer}
+        li.list-group-item Actors: #{movie.Actors}
+  div.row
+    div.well
+      p.plot Plot #{movie.Plot}
+      hr
+      div.movie-buttons
+        a(href="http://imdb.com/title/" + movie.imdbID target="_blank" class="btn btn-primary") View IMDB
+        a(href="/" class="btn btn-default") New Search

@@ -1,0 +1,11 @@
+#general
+.DS_Store
+
+#production files
+.eslintrc.json
+
+#node modules
+node_modules
+
+#environment variables
+.env
